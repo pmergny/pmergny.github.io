@@ -6,7 +6,6 @@ Personal academic website for Pierre Mergny, hosted with GitHub Pages and Jekyll
 
 - Home page: `index.md`
 - Publications: `_pages/publications.md`
-- Talks: `_pages/talks.md`
 - Teaching: `_pages/teaching.md`
 - CV page: `_pages/cv.md`
 - Sidebar / identity: `_config.yml`

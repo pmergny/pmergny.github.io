@@ -15,7 +15,8 @@ Current themes include spectral methods for high-dimensional inference, feature 
 ## Recent news
 
 <ul class="news-list">
+  <li class="news-item"><span class="news-date">Sept. 2026</span><span>I attended and gave a talk at <a href="https://sites.google.com/view/randomnesssatya2026/home"><em>The Art of Randomness</em></a>, a conference celebrating Satya Narayan Majumdar.</span></li>
+  <li class="news-item"><span class="news-date">Aug. 2026</span><span>New preprint with Florent Krzakala and Vanessa Piccolo: <a href="https://arxiv.org/abs/2608.12183"><em>Spectral phase transitions in Gaussian multi-index models</em></a>. We characterize the limiting spectrum and outlier transitions of matrix-valued spectral estimators, and show that an optimal preprocessing reaches the weak-recovery threshold.</span></li>
   <li class="news-item"><span class="news-date">Aug. 2026</span><span>Our work with Lenka Zdeborová, <a href="https://proceedings.mlr.press/v300/mergny26a.html"><em>Spectral Thresholds in Correlated Spiked Models and Fundamental Limits of Partial Least Squares</em></a>, appears in the AISTATS 2026 proceedings.</span></li>
   <li class="news-item"><span class="news-date">Nov. 2025</span><span>I joined the DATA team at ENS Paris as a postdoctoral researcher.</span></li>
-  <li class="news-item"><span class="news-date">Jun. 2025</span><span>New preprint with Hugo Tabanelli, Lenka Zdeborová and Florent Krzakala: <a href="https://arxiv.org/abs/2506.02664"><em>Computational Thresholds in Multi-Modal Learning via the Spiked Matrix-Tensor Model</em></a>.</span></li>
 </ul>
