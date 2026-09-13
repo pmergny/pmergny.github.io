@@ -4,39 +4,138 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
-    <title>{% if page.title and page.title != "" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+
+    <title>
+      {% if page.title and page.title != "" %}
+        {{ page.title }} ·
+      {% endif %}
+      {{ site.title }}
+    </title>
+
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+      document.documentElement.dataset.theme =
+        savedTheme || preferredTheme;
+    </script>
+
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
+
   <body>
-    <div class="site-shell">
-      <aside class="profile" aria-label="Researcher profile">
-        <a class="profile-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-        <div class="profile-role">{{ site.profile.position }}</div>
-        <div class="profile-affiliation">{{ site.profile.affiliation }}</div>
 
-        <img class="profile-photo" src="{{ site.profile.photo | relative_url }}" alt="Portrait of {{ site.title }}">
+    <header class="topbar">
+      <div class="topbar-inner">
 
-        <div class="profile-meta">{{ site.profile.location }}</div>
+        <a class="site-name" href="{{ '/' | relative_url }}">
+          {{ site.title }}
+        </a>
 
-        <nav class="side-nav" aria-label="Main navigation">
+        <nav class="top-nav" aria-label="Main navigation">
           {% for item in site.data.navigation.main %}
-            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.title }}</a>
+            <a
+              href="{{ item.url | relative_url }}"
+              {% if page.url == item.url %}class="active"{% endif %}
+            >
+              {{ item.title }}
+            </a>
           {% endfor %}
         </nav>
 
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          ☾
+        </button>
+
+      </div>
+    </header>
+
+
+    <div class="site-shell">
+
+      <aside class="profile" aria-label="Researcher profile">
+
+        <img
+          class="profile-photo"
+          src="{{ site.profile.photo | relative_url }}"
+          alt="Portrait of {{ site.title }}"
+        >
+
+        <div class="profile-role">
+          {{ site.profile.position }}
+        </div>
+
+        <div class="profile-affiliation">
+          {{ site.profile.affiliation }}
+        </div>
+
+        <div class="profile-meta">
+          {{ site.profile.location }}
+        </div>
+
         <div class="profile-links">
           <a href="mailto:{{ site.profile.email }}">Email</a>
-          <span aria-hidden="true">·</span>
-          <a href="{{ site.profile.scholar }}">Google Scholar</a>
-          <span aria-hidden="true">·</span>
-          <a href="{{ site.profile.github }}">GitHub</a>
+          <span>·</span>
+
+          <a href="{{ site.profile.scholar }}">
+            Google Scholar
+          </a>
+          <span>·</span>
+
+          <a href="{{ site.profile.github }}">
+            GitHub
+          </a>
         </div>
+
       </aside>
 
+
       <main class="content">
-        {% if page.title and page.title != "" %}<h1>{{ page.title }}</h1>{% endif %}
+
+        {% if page.title and page.title != "" %}
+          <h1>{{ page.title }}</h1>
+        {% endif %}
+
         {{ content }}
+
       </main>
+
     </div>
+
+
+    <script>
+      const button = document.getElementById("theme-toggle");
+
+      function updateThemeIcon() {
+        button.textContent =
+          document.documentElement.dataset.theme === "dark"
+            ? "☀"
+            : "☾";
+      }
+
+      updateThemeIcon();
+
+      button.addEventListener("click", () => {
+        const current =
+          document.documentElement.dataset.theme;
+
+        const next =
+          current === "dark" ? "light" : "dark";
+
+        document.documentElement.dataset.theme = next;
+
+        localStorage.setItem("theme", next);
+
+        updateThemeIcon();
+      });
+    </script>
+
   </body>
 </html>
