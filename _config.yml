@@ -1,98 +1,24 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Pierre Mergny
-email: mergny.pierre@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
- Postdoc @ ENS Paris 
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
-search: true
+description: Postdoctoral researcher at ENS Paris
+url: "https://pmergny.github.io"
+baseurl: ""
 
-# Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink: pretty
+timezone: Europe/Paris
 
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Kept deliberately minimal so the site works cleanly on GitHub Pages.
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
 
-author:
-  name   : "Pierre Mergny"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Postdoc @ ENS Paris"
-  links:
-    - label: "Google Scholar"
-      icon: "fab fa-fw fa-github"
-      url: "https://scholar.google.com/citations?user=emzl03AAAAAJ&hl=fr"
-
-footer:
-  links:
-    - label: "Google Scholar"
-      icon: "fab fa-fw fa-github"
-      url: "https://scholar.google.com/citations?user=emzl03AAAAAJ&hl=fr"
-
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-
-#category_archive:
- # type: liquid
-  #path: /categories/
-#tag_archive:
- # type: liquid
-  #path: /tags/
+profile:
+  position: "Postdoctoral researcher"
+  affiliation: "ENS Paris — DATA / Centre for Data Science"
+  location: "Paris, France"
+  email: "mergny.pierre@gmail.com"
+  scholar: "https://scholar.google.com/citations?user=emzl03AAAAAJ&hl=en"
+  github: "https://github.com/pmergny"
+  photo: "/assets/images/bio-photo.jpg"

@@ -1,26 +1,26 @@
 ---
+layout: default
 title: "Curriculum Vitae"
 permalink: /cv/
-layout: single
-author_profile: true
 ---
 
-You can download my full CV here:
+<a class="cv-button" href="/assets/CV.pdf">Download CV (PDF)</a>
 
-👉 **[Download CV (PDF)](/assets/files/CV.pdf)**
+## Academic positions
 
----
+**Postdoctoral researcher, ENS Paris** — Centre for Data Science, DATA team  
+With Bruno Loureiro, Nov. 2025–present.
 
-## Short CV
+**Postdoctoral fellow, EPFL** — IdePHICS group  
+With Florent Krzakala, Nov. 2022–Oct. 2025.
 
-### Current Position
-- **Postdoctoral Researcher**, ENS Paris  
-  Centre for Data Science (CSD), DATA team
+## Education
 
-### Previous Positions
-- **Postdoctoral Fellow**, École Polytechnique Fédérale de Lausanne (EPFL)
+**PhD in Theoretical Physics (Random Matrix Theory)** — Université Paris-Saclay / École Polytechnique, 2019–2022.  
+Supervised by Satya Majumdar and Marc Potters.
 
-### Education
-- **PhD**, Theoretical Physics Supervised by Satya Majumdar and Marc Potters
-- **MSc**, Mathematics, ENS Paris
-- **MSc**, Theoretical Physics, Sorbonne Université
+**Master of Applied and Theoretical Mathematics** — PSL / ENS Paris, 2018–2019.
+
+**Master of Physics of Complex Systems** — Sorbonne Université, 2017–2018.
+
+**ESPCI Paris**, 2014–2018.
